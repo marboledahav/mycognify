@@ -64,7 +64,10 @@ button:hover {
         const textField = document.getElementById("text");
         const actionSelect = document.getElementById("action");
 
-        const response = await fetch('http://localhost:5000/analyze', {
+        const currentURL = window.location.href;
+        const analyzeURL = currentURL + 'analyze';
+
+        const response = await fetch(analyzeURL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -104,6 +107,9 @@ button:hover {
     <pre id="output"></pre> <!-- Use pre element for output -->
 
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
