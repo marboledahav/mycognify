@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS, cross_origin
 import openai 
 import os
@@ -60,7 +60,7 @@ def analyze_text():
 
 @app.route('/')
 def home():
-    return "Welcome to Cognify!"
+    return render_template('index.html')
 
 
     response = {'output': output}
