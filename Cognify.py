@@ -58,6 +58,11 @@ def analyze_text():
     except Exception as e:
         return jsonify({"error": "Could not analyze text: " + str(e)}), 500
 
+@app.route('/')
+def home():
+    return "Welcome to Cognify!"
+
+
     response = {'output': output}
     return jsonify(response), 200
 if __name__ == '__main__':
