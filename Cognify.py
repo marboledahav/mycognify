@@ -61,5 +61,6 @@ def analyze_text():
     response = {'output': output}
     return jsonify(response), 200
 if __name__ == '__main__':
-   port = int(os.environ.get("PORT", 5001))
-app.run(port=port, host='0.0.0.0')
+    # Change the way you get the port
+    port = int(os.environ.get("PORT", 5000))  # Default to 5000 if PORT is not set
+    app.run(port=port, host='0.0.0.0')
