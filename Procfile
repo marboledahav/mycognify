@@ -1,1 +1,1 @@
-web: python Cognify.py -p $PORT
+web: gunicorn Cognify:app -p $PORT
