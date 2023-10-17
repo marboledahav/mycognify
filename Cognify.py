@@ -9,8 +9,6 @@ openai.api_key = "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"  # Replac
 
 @app.route('/analyze', methods=['POST'])
 @cross_origin()
-def home():
-    return "Welcome to Cognify!"
 def analyze_text():
     text = request.form.get('text')
     action = request.form.get('action')  # Add a new form field for the user's chosen action
